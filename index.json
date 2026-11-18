@@ -1,9 +1,11 @@
 {
   "formatVersion": 1,
   "market": "official",
-  "serial": 1,
-  "generatedAt": "2026-11-18T07:55:13Z",
-  "expiresAt": "2026-12-18T07:55:13Z",
-  "downloadHosts": ["codinglossy.github.io"],
+  "serial": 2,
+  "generatedAt": "2026-11-18T08:01:24Z",
+  "expiresAt": "2026-12-18T08:01:24Z",
+  "downloadHosts": [
+    "codinglossy.github.io"
+  ],
   "plugins": []
 }
