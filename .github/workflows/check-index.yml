@@ -22,7 +22,7 @@ permissions:
 
 env:
   # FATCAT_AI_REF: c828e18b5814c93765917641b5d2e6b4e072cd2d # FatCat-AI main after the plugin market merge (#72)
-  FATCAT_AI_REF: 8f9dcc0b426c40a87f29e75d67ee3843ff19aed3 # FatCat-AI main after PR #74
+  FATCAT_AI_REF: 366eef7eb6492a653f56ae2ea14226b64d28614a # FatCat-AI main after PR #75
 
 jobs:
   check:
@@ -62,4 +62,4 @@ jobs:
       #   run: node fatcat-ai/scripts/plugins/sign-index.mjs --verify
       - name: The published signature matches index.json (public keys only)
         if: ${{ hashFiles('index.json.sig') != '' }}
-        run: env -u CI -u GITHUB_ACTIONS node fatcat-ai/scripts/plugins/sign-index.mjs --verify
+        run: node fatcat-ai/scripts/plugins/sign-index.mjs --verify
