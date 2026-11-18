@@ -62,7 +62,4 @@ jobs:
       #   run: node fatcat-ai/scripts/plugins/sign-index.mjs --verify
       - name: The published signature matches index.json (public keys only)
         if: ${{ hashFiles('index.json.sig') != '' }}
-        env:
-          CI: ''
-          GITHUB_ACTIONS: ''
-        run: node fatcat-ai/scripts/plugins/sign-index.mjs --verify
+        run: env -u CI -u GITHUB_ACTIONS node fatcat-ai/scripts/plugins/sign-index.mjs --verify
